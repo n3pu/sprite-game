@@ -14,6 +14,8 @@ canvas {
   image-rendering: -webkit-optimize-contrast; /* Webkit (non standard naming) */
   image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
   image-rendering: crisp-edges;               /* Possible future browsers. */
+  z-index: 2;
+  position: relative;
 }
 
 #controls {
@@ -25,6 +27,7 @@ canvas {
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
+  z-index: 3;
 }
 
 button {
@@ -38,4 +41,30 @@ button {
   background-color: black;
   color: white;
   font-size: 24px;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.ground {
+  height: auto;
+  width: 100%;
+  flex: 1;
+  background-color: #553a24;
+}
+
+.sky {
+  height: 100%;
+  width: 100%;
+  background-color: #1adfc4;
 }
