@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+canvas {
+  image-rendering: optimizeSpeed;             /* Older versions of FF */
+  image-rendering: -moz-crisp-edges;          /* FF 6.0+ */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non standard naming) */
+  image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+  image-rendering: crisp-edges;               /* Possible future browsers. */
+}
+
+#controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+button {
+  margin: 5px;
+  padding: 16px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+}
